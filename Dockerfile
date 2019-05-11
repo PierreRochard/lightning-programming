@@ -1,14 +1,8 @@
 FROM jupyter/minimal-notebook:177037d09156
 
-USER $NB_UID
-
-RUN wget https://dl.google.com/go/go1.12.3.linux-amd64.tar.gz
-RUN tar -C ~/ -xzf go1.12.3.linux-amd64.tar.gz
-RUN export GOPATH=~/gocode
-RUN export PATH=$PATH:~/go/bin:$GOPATH/bin
-RUN go get -d github.com/lightningnetwork/lnd
-RUN cd $GOPATH/src/github.com/lightningnetwork/lnd
-RUN make && make install
+RUN wget https://github.com/lightningnetwork/lnd/releases/download/v0.6.1-beta/lnd-linux-amd64-v0.6.1-beta.tar.gz
+RUN tar -C ~/ -xzf lnd-linux-amd64-v0.6.1-beta.tar.gz
+RUN export PATH=$PATH:~/lnd-linux-amd64-v0.6.1-beta/
 RUN pip install --no-cache-dir lnd-grpc
 
 
