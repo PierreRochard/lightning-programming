@@ -27,6 +27,8 @@ To start over:
 
 4. Open a new terminal tab
 
-5. `./lncli unlock`
+5. `cd lnd-linux-amd64-v0.6.1-beta`
 
-6. Enter your password and hit enter
+6. `./lncli unlock`
+
+7. Enter your password and hit enter
