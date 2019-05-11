@@ -19,12 +19,14 @@
 
 To start over:
 
-0. Open a new terminal tab
+1. Open a new terminal tab
 
-1. `cd lnd-linux-amd64-v0.6.1-beta`
+2. `cd lnd-linux-amd64-v0.6.1-beta`
 
-2. `./lnd --bitcoin.active --bitcoin.testnet --debuglevel=info --bitcoin.node=neutrino --neutrino.connect=faucet.lightning.community`
+3. `./lnd --bitcoin.active --bitcoin.testnet --debuglevel=info --bitcoin.node=neutrino --neutrino.connect=faucet.lightning.community`
 
-3. `./lncli unlock`
+4. Open a new terminal tab
 
-4. Enter your password and hit enter
+5. `./lncli unlock`
+
+6. Enter your password and hit enter
