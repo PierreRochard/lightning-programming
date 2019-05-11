@@ -9,6 +9,8 @@ RUN export PATH=$PATH:~/go/bin:$GOPATH/bin
 RUN go get -d github.com/lightningnetwork/lnd
 RUN cd $GOPATH/src/github.com/lightningnetwork/lnd
 RUN make && make install
+RUN pip install --no-cache-dir lnd-grpc
+
 
 # Expose lnd ports (server, rpc).
 EXPOSE 9735 10009
